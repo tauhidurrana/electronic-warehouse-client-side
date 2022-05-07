@@ -12,12 +12,13 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/items">Inventory Items</Nav.Link>
+                            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                             <Nav.Link as={Link} to="/myitems">My Items</Nav.Link>
                             
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
                             {/* {
                                 user?
                                 <Button style={{ textDecoration: 'none' }} variant="link" onClick={handleSignOut}>Sign out</Button>
