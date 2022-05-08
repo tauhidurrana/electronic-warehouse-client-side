@@ -1,10 +1,27 @@
-# Getting Started with Create React App
+# Electronics Warehouse Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Project Link [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+About the projects:
+* warehouse inventory management
+* you can see your add items
+* You can see stock update.
+* After login there are many options
+* Email and google Authentication.
 
-In the project directory, you can run:
+Technology used:
+* React JS.
+* Javascript.
+* HTML.
+* Mongodb
+* NodeJS
+* css.
+* Firebase Authentication.
+* React Bootstrap.
+* React Router dom.
+* Firebase hook.
+* React Firebase hook.
 
 ### `npm start`
 
