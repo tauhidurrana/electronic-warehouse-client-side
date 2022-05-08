@@ -9,6 +9,7 @@ import Myitems from './Pages/Myitems/Myitems';
 import Register from './Pages/Register/Register';
 import ItemDetail from './Pages/ItemDetail/ItemDetail';
 import AddItem from './Pages/AddItem/AddItem';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -22,7 +23,11 @@ function App() {
         <Route path='/myitems'element={<Myitems></Myitems>}></Route>
         <Route path='/login'element={<Login></Login>}></Route>
         <Route path='/register'element={<Register></Register>}></Route>
-        <Route path='/inventory/:ItemID'element={<ItemDetail></ItemDetail>}></Route>
+        <Route path='/inventory/:ItemID'element={
+          <RequireAuth>
+            <ItemDetail></ItemDetail>
+          </RequireAuth>
+        }></Route>
       </Routes>
     </div>
   );
