@@ -27,7 +27,7 @@ const ItemDetail = () => {
                         </Card.Text>
                     </div>
                     <Button className='btn-item'  variant="danger" size="lg">
-                        update
+                        Delivered
                     </Button>
                 </Card.Body>
             </Card>

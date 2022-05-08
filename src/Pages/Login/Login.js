@@ -47,7 +47,7 @@ const Login = () => {
     }
     return (
         <div className='container mb-5 pb-5 w-50 mx-auto'>
-        <h2 className='text-primary text-center mt-2'>This is Login</h2>
+        <h2 className='text-success text-center mt-2'> Login</h2>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -61,14 +61,14 @@ const Login = () => {
             {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
             </Form.Group> */}
-            <Button variant="primary w-50 mx-auto d-block" type="submit">
+            <Button variant="success w-50 mx-auto d-block" type="submit">
                 Login
             </Button>
         </Form>
         {errorElement}
-        <p className='mt-2'>New to Genius car? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+        <p className='mt-2'>Don't have an Account? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
 
-        <p className='mt-2'>New to Genius car? <button className='reset-btn btn btn-link' onClick={async () => {
+        <p className='mt-2'>Change Password? <button className='reset-btn btn btn-link' onClick={async () => {
             await sendPasswordResetEmail(emailRef.current.value);
             alert('Sent email');
         }}>Forget Password</button></p>
