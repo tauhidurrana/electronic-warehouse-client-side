@@ -9,3 +9,20 @@
         display: flex;
     
 }
+
+.upcoming img{
+        height: 400px;
+}
+.award-header{
+        text-align: center;
+}
+.achievement{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 40px;
+}
+.achievement img{
+        width: 200px;
+        height: 200px;
+}
