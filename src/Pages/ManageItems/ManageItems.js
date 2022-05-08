@@ -13,8 +13,8 @@ const ManageItems = () => {
     return (
         <div id='items' className='container'>
             <h1 className='text-primay text-center mt-5 mb-5'>Inventory Items</h1>
-            <div className='items-container'>
-                <div className='grid grid-cols-2'>
+            <div>
+                <div className='manage-items-container'>
                     {
                         items.map(item => <ManageItemsAll
                             key={item._id}
