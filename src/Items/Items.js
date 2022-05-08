@@ -29,5 +29,3 @@ const Items = () => {
 
 export default Items;
 
-// key={service.id}
-// service={service}

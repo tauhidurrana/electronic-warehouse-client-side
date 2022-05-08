@@ -6,8 +6,8 @@ const Item = (props) => {
     const { _id, name, img, description, price } = props.item;
     const navigate = useNavigate()
 
-    const navigateToServiceDetail = (id) => {
-        navigate(`/item/${id}`)
+    const navigateToItemDetail = (id) => {
+        navigate(`/inventory/${id}`)
     }
     return (
         <div className='item mb-5'>
@@ -22,7 +22,7 @@ const Item = (props) => {
                         <p>Detail: full 1 day with Lunch + Breakfast</p>
                     </Card.Text>
                 </div>
-                <Button className='btn-item' onClick={() => navigateToServiceDetail(_id)} variant="danger" size="lg">
+                <Button className='btn-item' onClick={() => navigateToItemDetail(_id)} variant="danger" size="lg">
                     update
                 </Button>
             </Card.Body>

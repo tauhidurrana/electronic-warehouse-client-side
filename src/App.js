@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login';
 import Blogs from './Pages/Blogs/Blogs';
 import Myitems from './Pages/Myitems/Myitems';
 import Register from './Pages/Register/Register';
+import ItemDetail from './Pages/ItemDetail/ItemDetail';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/myitems'element={<Myitems></Myitems>}></Route>
         <Route path='/login'element={<Login></Login>}></Route>
         <Route path='/register'element={<Register></Register>}></Route>
+        <Route path='/inventory/:ItemID'element={<ItemDetail></ItemDetail>}></Route>
       </Routes>
     </div>
   );
