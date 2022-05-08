@@ -6,7 +6,7 @@ const ManageItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://salty-stream-70664.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);

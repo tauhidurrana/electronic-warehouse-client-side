@@ -8,7 +8,7 @@ const ItemDetail = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${ItemID}`;
+        const url = `https://salty-stream-70664.herokuapp.com/items/${ItemID}`;
 
         fetch(url)
             .then(res => res.json())
@@ -24,7 +24,7 @@ const ItemDetail = () => {
         const newStock = item.quantity + stockInput;
         const data = {quantity: newStock};
 
-        const url = `http://localhost:5000/item/update/${ItemID}`;
+        const url = `https://salty-stream-70664.herokuapp.com/item/update/${ItemID}`;
         fetch(url, {
             method: 'PUT',
             headers:{
@@ -43,7 +43,7 @@ const ItemDetail = () => {
         decreasedQty = decreasedQty - 1;
         const data = {quantity: decreasedQty};
 
-        const url = `http://localhost:5000/item/update/${ItemID}`;
+        const url = `https://salty-stream-70664.herokuapp.com/item/update/${ItemID}`;
         fetch(url, {
             method: 'PUT',
             headers:{

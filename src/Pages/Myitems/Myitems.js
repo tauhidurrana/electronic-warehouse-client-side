@@ -7,7 +7,7 @@ const Myitems = () => {
     const [user, loading, error] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myitems?email=${user.email}`)
+        fetch(`https://salty-stream-70664.herokuapp.com/myitems?email=${user.email}`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);

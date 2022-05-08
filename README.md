@@ -1,6 +1,6 @@
 # Electronics Warehouse Management
 
-Live Project Link [Create React App](https://github.com/facebook/create-react-app).
+Live Project Link [Create React App](https://warehouse-manage-2f330.web.app/).
 
 ## Available Scripts
 About the projects:

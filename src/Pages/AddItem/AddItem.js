@@ -6,7 +6,7 @@ const AddItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = 'http://localhost:5000/items';
+        const url = 'https://salty-stream-70664.herokuapp.com/items';
         fetch(url, {
             method: 'POST',
             headers:{
