@@ -13,7 +13,7 @@ const Items = () => {
 
     return (
         <div id='items' className='container'>
-        <h1 className='text-primay text-center mt-5 mb-5'>Our Services</h1>
+        <h1 className='text-primay text-center mt-5 mb-5'>Inventory Items</h1>
         <div className='items-container'>
         
             {
