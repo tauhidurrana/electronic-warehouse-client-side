@@ -6,16 +6,61 @@ const ItemDetail = () => {
     const { ItemID } = useParams();
     const [item, setItem] = useState({});
 
+
     useEffect(() => {
         const url = `http://localhost:5000/items/${ItemID}`;
 
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
-    }, [])
+    }, [item]);
+
+
+
+    const handleAddStock = event => {
+        
+        event.preventDefault();
+        const stockInput = parseInt(event.target.stock.value);
+        const newStock = item.quantity + stockInput;
+        const data = {quantity: newStock};
+
+        const url = `http://localhost:5000/item/update/${ItemID}`;
+        fetch(url, {
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(result=>{
+            console.log(result);
+        })
+    }
+
+    let decreasedQty = item.quantity;
+    const handleDelivered = () => {
+        decreasedQty = decreasedQty - 1;
+        const data = {quantity: decreasedQty};
+
+        const url = `http://localhost:5000/item/update/${ItemID}`;
+        fetch(url, {
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(result=>{
+            console.log(result);
+        })
+
+    }
+
     return (
         <div className='item mb-5'>
-            <Card className='' border="light" style={{ width: '22rem', height: '500px' }}>
+            <Card className='mx-auto' border="light" style={{ width: '24rem', height: '500px' }}>
                 <Card.Img variant="top" src={item.img} />
                 <Card.Body className='d-flex flex-column justify-content-between'>
                     <div>
@@ -23,14 +68,21 @@ const ItemDetail = () => {
                         <Card.Text>
                             {item.description}
                             <h3>Price: {item.price}</h3>
-                            <p>Detail: full 1 day with Lunch + Breakfast</p>
+                            <p>Quantity: {item.quantity}</p>
                         </Card.Text>
                     </div>
-                    <Button className='btn-item'  variant="danger" size="lg">
+                    <Button onClick={handleDelivered} className='btn-item' variant="danger" size="lg">
                         Delivered
                     </Button>
                 </Card.Body>
+                <div>
+                    <form onSubmit={handleAddStock}>
+                        <input type="number" name="stock" id="" />
+                        <button>Add Stock</button>
+                    </form>
+                </div>
             </Card>
+
         </div>
     );
 };

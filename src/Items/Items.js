@@ -4,6 +4,7 @@ import './Items.css';
 
 const Items = () => {
     const [items, setItems] = useState([]);
+    const sliceItems = items.slice(0,6);
     
     useEffect(() => {
         fetch('http://localhost:5000/items')
@@ -17,7 +18,7 @@ const Items = () => {
         <div className='items-container'>
         
             {
-                items.map(item => <Item
+                sliceItems.map(item => <Item
                 key={item._id}
                 item={item}
                 ></Item>)

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Item from '../../Item/Item';
+import ManageItemsAll from '../ManageItemsAll/ManageItemsAll';
 
 const ManageItems = () => {
     const [items, setItems] = useState([]);
@@ -13,13 +14,14 @@ const ManageItems = () => {
         <div id='items' className='container'>
             <h1 className='text-primay text-center mt-5 mb-5'>Inventory Items</h1>
             <div className='items-container'>
-
-                {
-                    items.map(item => <Item
-                        key={item._id}
-                        item={item}
-                    ></Item>)
-                }
+                <div className='grid grid-cols-2'>
+                    {
+                        items.map(item => <ManageItemsAll
+                            key={item._id}
+                            item={item}
+                        ></ManageItemsAll>)
+                    }
+                </div>
             </div>
         </div>
     );

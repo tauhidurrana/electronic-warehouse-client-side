@@ -12,6 +12,7 @@ import AddItem from './Pages/AddItem/AddItem';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import NotFound from './Pages/NotFound/NotFound';
 import ManageItems from './Pages/ManageItems/ManageItems';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
